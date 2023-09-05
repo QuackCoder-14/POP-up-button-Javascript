@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    text-decoration: none;
+    outline: none;
+    box-sizing: border-box;
+}
+.section{
+    
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background:  pink;
+  
+
+}
+.section .open{
+    color: black;
+    border: 1px solid black;
+    box-shadow: 0px 3px 4px rgb(0,0, 0,0.3);
+    width: 180px;
+    background: white;
+    padding: 10px;
+    transition: 0.5s;
+    font-size: 17px;
+    font-weight: 400;
+}
+.section .open:hover{
+    color: white;
+    background: hotpink;
+    letter-spacing: 1px;
+    border: none;
+    animation: button 0.5s infinite;
+}
+@keyframes button{
+    0%{
+        transform: translate(0px,0px) rotate(0deg);
+    }
+    20%{
+        transform: translate(4px,4px) rotate(4deg);
+    }
+    40%{
+        transform: translate(-2px,-2px) rotate(-1deg);
+    }
+    60%{
+        transform: translate(5px,-4px) rotate(5deg);
+    }
+    80%{
+        transform: translate(-5px,4px) rotate(-5px);
+    }
+    100%{
+        transform: translate(-4px,4px) rotate(-4deg);
+    }
+}
+.container
+{
+    position: absolute;
+    top: 25%;
+    left: -400px;
+}
+.container .box{
+    width: 350px;
+    height: 400px;
+    background: white;
+    box-shadow: 0 5px 9px rgb(0,0, 0,0.4);
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.container .box img{
+    height: 120px;
+    margin: 20px 120px;
+    animation: animate 10s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(360deg);
+    }
+}
+
+.container .box h2{
+    text-align: center;
+    margin: 10px;
+    text-transform: capitalize;
+    font-size: 23px;
+}
+.container .box p{
+    text-align: center;
+    font-weight: 400;
+    margin: 15px;
+
+}
+.container.active{
+    left: 100px;
+    transition: 0.5s;
+}
+.container .box .read{
+    width: 180px;
+    padding: 10px;
+    background: transparent;
+    border: 2px solid orangered;
+    outline: none;
+    margin: 25px 83px;
+    transition: 0.5s;
+    font-size: 15px;
+    border-radius: 3px;
+    color: black;
+
+}
+.container .box .link {
+    color: gray;
+    font-weight: 400;
+    text-decoration: none;
+    transition: 0.5s;
+margin: 0 115px;
+font-size: 10px;
+text-transform: uppercase;
+   
+}
+.container .box .read:hover{
+    color: white;
+    background: orangered;
+    letter-spacing: 1px;
+}
+.container .box .link:hover{
+    color: black;
+}
+.container .close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: gray;
+    transition: 0.5s;
+    font-size: 25px;
+    animation: rotate 1s linear ease-in-out ;
+}
+.container .close:hover{
+    color: black;
+}
+@keyframes rotate{
+    0%{
+        transform: scale(0);
+    }
+    50%{
+        transform: scale(1);
+    }
+}
